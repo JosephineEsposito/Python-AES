@@ -25,7 +25,7 @@ def encrypt(text, passphrase):
     formatted_message = base64.b64encode(cipher_text).decode('utf-8') + '\n' + base64.b64encode(tag).decode('utf-8') + '\n' + base64.b64encode(nonce).decode('utf-8') + '\n' + base64.b64encode(kdf_salt).decode('utf-8')
 
     # aggiungiamo l'header la messaggio
-    message = 'C01' + formatted_message
+    message = 'CAP01' + formatted_message
 
     # prints of the result
     print(f"\n||----------------------------||")
@@ -44,7 +44,7 @@ def encrypt(text, passphrase):
 
 def decrypt(message, passphrase):
     # estrariamo i componenti dal messaggio formattato
-    message_components = message[3:].split('\n')
+    message_components = message[5:].split('\n')
     cipher_text = base64.b64decode(message_components[0])
     tag = base64.b64decode(message_components[1])
     nonce = base64.b64decode(message_components[2])
