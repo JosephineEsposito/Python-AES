@@ -33,6 +33,7 @@ def encrypt(text, passphrase):
     print(f"\nCipher_text :   {cipher_text.hex()}")
     print(f"Tag        :   {tag.hex()}")
     print(f"Nonce      :   {nonce.hex()}")
+    print(f"KDF Salt   :   {kdf_salt.hex()}")
     print(f"Key        :   {key.hex()}")
     print(f"\n--------------------------------")
     print(f"\nTRANSMITTED MESSAGE:")
