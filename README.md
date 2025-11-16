@@ -1,5 +1,2 @@
 # Python AES
- A python aes encrypt/decrypt program
-
-# Listo fo implemented and tested Modes
-1. AES, GCM (no authentication)
+ A simple Python script to encrypt and decrypt using AES with GCM (no authentication)
